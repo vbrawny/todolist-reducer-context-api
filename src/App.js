@@ -1,10 +1,21 @@
-import "./styles.css";
+import React from "react";
+import "./App.css";
+import TodoInput from "./components/TodoInput/TodoInput";
+import TodoList from "./components/TodoList/TodoList";
 
-export default function App() {
+//import TodoState from "./context/TodoState";
+
+function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Edit to see some magic happen!</h2>
+    <div className="app">
+      <div className="app__todoApp">
+        {/* <TodoState> */}
+        <TodoInput />
+        <TodoList />
+        {/* </TodoState> */}
+      </div>
     </div>
   );
 }
+
+export default App;
